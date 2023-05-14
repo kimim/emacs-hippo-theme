@@ -1,4 +1,4 @@
-;; hippo-light-theme.el --- Hippo color theme for GNU Emacs.
+;;; hippo-light-theme.el --- Hippo color theme
 
 
 ;; Permission is hereby granted, free of charge, to any person
@@ -29,7 +29,6 @@
 ;; URL: http://github.com/kimim/emacs-hippo-theme
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.1"))
-;; Keywords: theme
 
 
 ;;; Commentary:
