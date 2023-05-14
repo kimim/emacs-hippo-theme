@@ -1,4 +1,4 @@
-;; hippo-theme.el --- Hippo color theme for GNU Emacs.
+;; hippo-themes.el --- Hippo color theme for GNU Emacs.
 
 
 ;; Permission is hereby granted, free of charge, to any person
@@ -45,6 +45,6 @@
  'custom-theme-load-path
  (if load-file-name (file-name-directory load-file-name) default-directory))
 
-(provide 'hippo-theme)
+(provide 'hippo-themes)
 
-;;; hippo-theme.el ends here
+;;; hippo-themes.el ends here
