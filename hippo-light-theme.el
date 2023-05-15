@@ -38,7 +38,7 @@
 ;;; Code:
 
 (deftheme hippo-light
-    "Color theme by kimim.")
+  "Hippo Color theme for day light.")
 
 (let ((class '((class color) (min-colors 88)))
       (hippo-theme-bg "#f8f8f8")
@@ -55,7 +55,7 @@
       (hippo-theme-highlight "azure")
       (hippo-theme-modeline-bg "gainsboro")
       (hippo-theme-lowlight "SlateGray4"))
-  (apply 'custom-theme-set-faces 'hippo-light
+  (apply #'custom-theme-set-faces 'hippo-light
          (mapcar
           (lambda (x) `(,(car x) ((,class ,(cdr x)))))
           `((default :foreground ,hippo-theme-fg :background ,hippo-theme-bg)

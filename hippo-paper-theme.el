@@ -38,7 +38,7 @@
 ;;; Code:
 
 (deftheme hippo-paper
-    "Mimic Paper Colour.")
+  "Hippo Color for paper like.")
 
 (let ((class '((class color) (min-colors 88)))
       (hippo-theme-bg "#f4ecd8")
@@ -54,7 +54,7 @@
       (hippo-theme-shadow "grey20")
       (hippo-theme-highlight "#e4dcc8")
       (hippo-theme-modeline-bg "#e4dcc8"))
-  (apply 'custom-theme-set-faces 'hippo-paper
+  (apply #'custom-theme-set-faces 'hippo-paper
          (mapcar
           (lambda (x) `(,(car x) ((,class ,(cdr x)))))
           `((default :foreground ,hippo-theme-fg :background ,hippo-theme-bg)

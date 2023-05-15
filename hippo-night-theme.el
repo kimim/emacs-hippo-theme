@@ -38,7 +38,7 @@
 ;;; Code:
 
 (deftheme hippo-night
-    "Color theme by hippo-night.")
+  "Hippo Color theme for night.")
 
 (let ((class '((class color) (min-colors 88)))
       (hippo-theme-bg "#262626")
@@ -46,7 +46,7 @@
       (hippo-theme-const "cyan2")
       (hippo-theme-definition "deep sky blue")
       (hippo-theme-comment "medium sea green")
-      (hippo-theme-error "orange red")
+      (hippo-theme-error "#ff4500")
       (hippo-theme-builtin "#ff55ff")
       (hippo-theme-string "lime green")
       (hippo-theme-blue-3 "blue")
@@ -54,7 +54,7 @@
       (hippo-theme-shadow "grey80")
       (hippo-theme-highlight "gray12")
       (hippo-theme-modeline-bg "gray25"))
-  (apply 'custom-theme-set-faces 'hippo-night
+  (apply #'custom-theme-set-faces 'hippo-night
          (mapcar
           (lambda (x) `(,(car x) ((,class ,(cdr x)))))
           `((default :foreground ,hippo-theme-fg :background ,hippo-theme-bg)
