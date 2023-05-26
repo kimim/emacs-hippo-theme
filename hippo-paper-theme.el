@@ -68,7 +68,7 @@
             (fringe :background ,hippo-theme-bg)
             (mode-line :foreground "black" :background ,hippo-theme-modeline-bg :box nil :height 0.85)
             (mode-line-inactive :foreground "royal blue" :background ,hippo-theme-modeline-bg :box nil :height 0.85)
-            (mode-line-buffer-id :foreground "blue4" :box nil :weight bold)
+            (mode-line-buffer-id :box nil :weight bold)
             (header-line :foreground ,hippo-theme-fg :background ,hippo-theme-modeline-bg :box nil :height 0.85)
             (shadow :foreground ,hippo-theme-shadow)
             (success :foreground ,hippo-theme-error)
@@ -139,7 +139,7 @@
             (hl-line :background ,hippo-theme-highlight)
             ;; defaults
             (show-paren-match :background "turquoise")
-            (isearch :background "magenta3" :foreground "lightskyblue1")
+            (isearch :background "orange")
             (link :foreground "RoyalBlue3" :underline t)
             ;; other packages
             (helm-locate-finish :foreground ,hippo-theme-const)
@@ -179,6 +179,7 @@
             ;; (magit-branch-local :background "Grey85" :foreground "LightSkyBlue4" :box t)
             (ivy-highlight-face)
             (ivy-posframe :background "#eeeeee" :foreground "#000000")
+            (sdcv-tooltip-face :background "#eeeeee" :foreground "#000000")
             (wgrep-face :foreground ,hippo-theme-comment)
             (cider-instrumented-face)
             (mu4e-header-highlight-face :background "azure")
