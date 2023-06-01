@@ -129,7 +129,7 @@
             (org-todo :foreground "orange red" :weight bold)
             (org-checkbox :inherit org-todo)
             (org-warning :foreground "dark orchid" :weight bold)
-            (org-table :foreground "blue1")
+            (org-table :foreground "gray10")
             (org-footnote :foreground "purple" :underline t)
             (org-ref-cite-face :inherit link)
             (org-agenda-clocking :inherit secondary-selection
