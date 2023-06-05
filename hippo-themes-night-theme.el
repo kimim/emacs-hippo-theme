@@ -1,4 +1,4 @@
-;;; hippo-paper-theme.el --- Hippo color theme
+;;; hippo-themes-night-theme.el --- Hippo color theme
 
 
 ;; Permission is hereby granted, free of charge, to any person
@@ -37,37 +37,37 @@
 
 ;;; Code:
 
-(deftheme hippo-paper
-  "Hippo Color for paper like.")
+(deftheme hippo-themes-night
+  "Hippo Color theme for night.")
 
 (let ((class '((class color) (min-colors 88)))
-      (hippo-theme-bg "#f4ecd8")
-      (hippo-theme-fg "#000000")
-      (hippo-theme-definition "blue")
-      (hippo-theme-const "#110099")
-      (hippo-theme-comment "#3F7F5F")
-      (hippo-theme-error "#FF0000")
-      (hippo-theme-builtin "#7F0055")
-      (hippo-theme-string "#2A00FF")
-      (hippo-theme-blue-3 "#758BC6")
-      (hippo-theme-region "light steel blue")
-      (hippo-theme-shadow "grey50")
-      (hippo-theme-highlight "#e4dcc8")
-      (hippo-theme-modeline-bg "#e4dcc8"))
-  (apply #'custom-theme-set-faces 'hippo-paper
+      (hippo-theme-bg "#262626")
+      (hippo-theme-fg "#f0f0f0")
+      (hippo-theme-const "cyan2")
+      (hippo-theme-definition "deep sky blue")
+      (hippo-theme-comment "medium sea green")
+      (hippo-theme-error "#ff4500")
+      (hippo-theme-builtin "#ff55ff")
+      (hippo-theme-string "lime green")
+      (hippo-theme-blue-3 "blue")
+      (hippo-theme-region "gray30")
+      (hippo-theme-shadow "gray80")
+      (hippo-theme-highlight "gray12")
+      (hippo-theme-modeline-bg "gray25"))
+  (apply #'custom-theme-set-faces 'hippo-themes-night
          (mapcar
           (lambda (x) `(,(car x) ((,class ,(cdr x)))))
           `((default :foreground ,hippo-theme-fg :background ,hippo-theme-bg)
             (bold :inherit default :weight bold)
             (italic :inherit default :slant italic)
-            (underline :inherit default :foreground "orange red" :underline t)
+            (underline :inherit default :foreground "orange" :underline t)
             ;; make the code font in markdown look better
             (fixed-pitch :family Consolas)
             (fixed-pitch-serif :family Consolas)
             (cursor :background ,"orange")
             (fringe :background ,hippo-theme-bg)
-            (mode-line :foreground "black" :background ,hippo-theme-modeline-bg :box nil :height 0.85)
-            (mode-line-inactive :foreground "royal blue" :background ,hippo-theme-modeline-bg :box nil :height 0.85)
+            (mode-line :foreground ,hippo-theme-fg :background ,hippo-theme-modeline-bg :box nil :height 0.85)
+            (mode-line-inactive :foreground "light steel blue" :background ,hippo-theme-modeline-bg :box nil :height 0.85)
             (mode-line-buffer-id :box nil :weight bold)
             (header-line :foreground ,hippo-theme-fg :background ,hippo-theme-modeline-bg :box nil :height 0.85)
             (shadow :foreground ,hippo-theme-shadow)
@@ -77,10 +77,10 @@
             (compilation-warning :underline t :inherit warning)
             (compilation-error :underline t :inherit error)
             (compilation-info :underline t :foreground ,hippo-theme-const)
-            (highlight :background "darkseagreen2")
+            (highlight :background "gray30")
             (marginalia-documentation :background unspecified :slant italic) ;; remove background
-            (region :background ,hippo-theme-region :foreground ,hippo-theme-bg)
-            (secondary-selection :background "paleturquoise" :foreground "orange")
+            (region :background ,hippo-theme-region)
+            (secondary-selection :background "deep sky blue" :foreground "#f6f3e8")
             (whitespace-indentation :background "LightYellow" :foreground "lightgray")
             ;; (font-lock-negation-char-face :foreground "#e8e2b7")
             (font-lock-builtin-face :foreground ,hippo-theme-builtin :bold t)
@@ -99,14 +99,14 @@
             (font-lock-variable-name-face :foreground ,hippo-theme-fg)
             (font-lock-warning-face :foreground ,hippo-theme-error)
             (font-lock-doxygen-face :foreground "SaddleBrown" :background "#f7f7f7")
-            (org-level-1 :weight bold :foreground "#00008b") ;; dark blue
-            (org-level-2 :weight bold :foreground "#6a5acd") ;; slate blue
-            (org-level-3 :weight bold :foreground "#0078d7")
-            (org-level-4 :slant normal :foreground "#2EAE2C")
-            (org-level-5 :slant normal :foreground "#0077CC")
+            (org-level-1 :weight bold :foreground "light blue")
+            (org-level-2 :weight bold :foreground "turquoise")
+            (org-level-3 :weight bold :foreground "orange")
+            (org-level-4 :slant normal :foreground "#E3258D")
+            (org-level-5 :slant normal :foreground "#0088ff")
             (org-level-6 :slant italic :foreground "#EA6300")
-            (org-level-7 :slant italic :foreground "#FD8008")
-            (org-level-8 :slant italic :foreground "#E3258D")
+            (org-level-7 :slant italic :foreground "#2EAE2C")
+            (org-level-8 :slant italic :foreground "#FD8008")
             (markdown-header-face-1 :inherit org-level-1)
             (markdown-header-face-2 :inherit org-level-2)
             (markdown-header-face-3 :inherit org-level-3)
@@ -122,12 +122,12 @@
             (org-beamer-tag :inherit org-tag)
             (org-block-begin-line :foreground ,hippo-theme-const)
             (org-block-end-line :foreground ,hippo-theme-const)
-            (org-block :background "gray95")
-            (org-scheduled-previously :foreground ,hippo-theme-comment)
-            (org-todo :foreground "orange red" :weight bold)
-            (org-warning :foreground "dark orchid" :weight bold)
-            (org-table :foreground "blue1")
-            (org-footnote :foreground "purple" :underline t)
+            (org-block :background "gray20")
+            (org-scheduled-previously :foreground "cyan")
+            (org-todo :foreground "orange" :weight bold)
+            (org-warning :foreground "orange red" :weight bold)
+            (org-table :foreground "light blue")
+            (org-footnote :foreground "magenta2" :underline t)
             (org-ref-cite-face :inherit link)
             (org-agenda-clocking :inherit secondary-selection
                                  :foreground ,hippo-theme-fg)
@@ -135,25 +135,24 @@
             (gnus-header-subject :foreground "blue" :bold t)
             (ido-subdir :weight bold)
             (which-func :foreground ,hippo-theme-builtin)
-            (minibuffer-prompt :foreground "medium blue")
+            (minibuffer-prompt :foreground "light blue")
             (hl-line :background ,hippo-theme-highlight)
             ;; defaults
             (show-paren-match :background "turquoise")
-            (isearch :background "orange")
-            (link :foreground "RoyalBlue3" :underline t)
+            (isearch :background "magenta3")
+            (link :foreground "light blue" :underline t)
             ;; other packages
             (helm-locate-finish :foreground ,hippo-theme-const)
             (aw-mode-line-face :foreground ,hippo-theme-string)
-            (swiper-match-face-1 :background "white smoke")
-            (swiper-match-face-2 :background "#FFCCCC") ;;selected match 1
-            (swiper-match-face-3 :background "#CCFFFF") ;;selected match 2
-            (swiper-match-face-4 :background "#FFFFCC") ;;selected match 3
-            (swiper-background-match-face-1 :background "white smoke")
-            (swiper-background-match-face-2 :background "#FFECEC") ;; unselected match 1
-            (swiper-background-match-face-3 :background "#ECFFFF") ;; unselected match 2
-            (swiper-background-match-face-4 :background "#FFFFEC") ;; unselected match 3
-            (swiper-line-face :background "azure2")
-            (swiper-line-face :background "#f3d3d3")
+            (swiper-match-face-1 :background "RoyalBlue4")
+            (swiper-match-face-2 :background "#7d3c03")
+            (swiper-match-face-3 :background "#1a6600")
+            (swiper-match-face-4 :background "#750a20")
+            (swiper-background-match-face-1 :background "gray20")
+            (swiper-background-match-face-2 :background "#7d3c03")
+            (swiper-background-match-face-3 :background "#1a6600")
+            (swiper-background-match-face-4 :background "#750a20")
+            (swiper-line-face :background "RoyalBlue4")
             (hydra-face-red :foreground "#cc0000" :bold t)
             (hydra-face-blue :foreground "RoyalBlue3" :bold t)
             (powerline-active1 :background "grey22" :foreground "white" :inherit mode-line)
@@ -182,22 +181,22 @@
             (sdcv-tooltip-face :background "#eeeeee" :foreground "#000000")
             (wgrep-face :foreground ,hippo-theme-comment)
             (cider-instrumented-face)
-            (mu4e-header-highlight-face :background "azure")
-            (mu4e-replied-face :foreground "dark green")
-            (mu4e-forwarded-face :foreground "dark orange")
-            (mu4e-unread-face :foreground "blue" :bold t)
-            (message-cited-text-1 :foreground "blue")
-            (sr-active-path-face :background ,hippo-theme-bg :foreground "deep pink")
-            (sr-passive-path-face :background ,hippo-theme-bg :foreground "blue")
+            (mu4e-header-highlight-face :background "gray20")
+            (mu4e-replied-face :foreground "deep sky blue")
+            (mu4e-forwarded-face :foreground "turquoise")
+            (mu4e-unread-face :foreground "light green")
+            (sr-active-path-face :background ,hippo-theme-bg :foreground "gold")
+            (sr-passive-path-face :background ,hippo-theme-bg :foreground "light blue")
+            (hide-ifdef-shadow :inherit shadow :foreground "gray")
             (lsp-ui-doc-url :inherit link :height 0.8)
             (lsp-ui-doc-background :background ,hippo-theme-modeline-bg)
-            (term-color-white :foreground "blue")
-            (term-color-blue :foreground "blue")
+            (term-color-white :foreground "white")
+            (term-color-blue :foreground "light blue")
             (next-error :inherit highlight)
             (yas-field-highlight-face :inherit highlight)))))
 
 (custom-theme-set-variables
- 'hippo-paper
+ 'hippo-themes-night
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682"
                             "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"]))
 
@@ -208,6 +207,6 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'hippo-paper)
+(provide-theme 'hippo-themes-night)
 
-;;; hippo-paper-theme.el ends here
+;;; hippo-themes-night-theme.el ends here

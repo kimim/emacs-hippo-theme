@@ -1,4 +1,4 @@
-;;; hippo-light-theme.el --- Hippo color theme
+;;; hippo-themesv-light-theme.el --- Hippo color theme
 
 
 ;; Permission is hereby granted, free of charge, to any person
@@ -37,7 +37,7 @@
 
 ;;; Code:
 
-(deftheme hippo-light
+(deftheme hippo-themes-light
   "Hippo Color theme for day light.")
 
 (let ((class '((class color) (min-colors 88)))
@@ -55,7 +55,7 @@
       (hippo-theme-highlight "azure")
       (hippo-theme-modeline-bg "gainsboro")
       (hippo-theme-lowlight "SlateGray4"))
-  (apply #'custom-theme-set-faces 'hippo-light
+  (apply #'custom-theme-set-faces 'hippo-themes-light
          (mapcar
           (lambda (x) `(,(car x) ((,class ,(cdr x)))))
           `((default :foreground ,hippo-theme-fg :background ,hippo-theme-bg)
@@ -204,7 +204,7 @@
 
 
 (custom-theme-set-variables
- 'hippo-light
+ 'hippo-themes-light
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682"
                             "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"]))
 
@@ -215,6 +215,6 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'hippo-light)
+(provide-theme 'hippo-themes-light)
 
-;;; hippo-light-theme.el ends here
+;;; hippo-themes-light-theme.el ends here
