@@ -42,7 +42,7 @@
 
 (let ((class '((class color) (min-colors 88)))
       (hippo-theme-bg "#262626")
-      (hippo-theme-fg "#ffffff")
+      (hippo-theme-fg "#f0f0f0")
       (hippo-theme-const "cyan2")
       (hippo-theme-definition "deep sky blue")
       (hippo-theme-comment "medium sea green")
@@ -51,7 +51,7 @@
       (hippo-theme-string "lime green")
       (hippo-theme-blue-3 "blue")
       (hippo-theme-region "gray30")
-      (hippo-theme-shadow "grey80")
+      (hippo-theme-shadow "gray80")
       (hippo-theme-highlight "gray12")
       (hippo-theme-modeline-bg "gray25"))
   (apply #'custom-theme-set-faces 'hippo-night

@@ -51,7 +51,7 @@
       (hippo-theme-string "#2A00FF")
       (hippo-theme-blue-3 "#758BC6")
       (hippo-theme-region "LightBlue")
-      (hippo-theme-shadow "grey20")
+      (hippo-theme-shadow "grey50")
       (hippo-theme-highlight "azure")
       (hippo-theme-modeline-bg "gainsboro")
       (hippo-theme-lowlight "SlateGray4"))
