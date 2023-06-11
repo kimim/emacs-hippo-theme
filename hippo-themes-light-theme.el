@@ -51,7 +51,7 @@
       (hippo-theme-string "#2A00FF")
       (hippo-theme-blue-3 "#758BC6")
       (hippo-theme-region "LightBlue")
-      (hippo-theme-shadow "grey50")
+      (hippo-theme-shadow "grey30")
       (hippo-theme-highlight "azure")
       (hippo-theme-modeline-bg "gainsboro")
       (hippo-theme-lowlight "SlateGray4"))
@@ -100,6 +100,8 @@
             (font-lock-variable-name-face :foreground ,hippo-theme-fg)
             (font-lock-warning-face :foreground ,hippo-theme-error)
             (font-lock-doxygen-face :foreground "SaddleBrown" :background "#f7f7f7")
+            ;; avoid punctuation's background from default
+            (tree-sitter-hl-face:punctuation :background unspecified)
             (org-level-1 :weight bold :foreground "#00008b") ;; dark blue
             (org-level-2 :weight bold :foreground "#6a5acd") ;; slate blue
             (org-level-3 :weight bold :foreground "#0078d7")

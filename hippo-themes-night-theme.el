@@ -99,6 +99,8 @@
             (font-lock-variable-name-face :foreground ,hippo-theme-fg)
             (font-lock-warning-face :foreground ,hippo-theme-error)
             (font-lock-doxygen-face :foreground "SaddleBrown" :background "#f7f7f7")
+            ;; avoid punctuation's background from default
+            (tree-sitter-hl-face:punctuation :background unspecified)
             (org-level-1 :weight bold :foreground "light blue")
             (org-level-2 :weight bold :foreground "turquoise")
             (org-level-3 :weight bold :foreground "orange")
