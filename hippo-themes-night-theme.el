@@ -52,7 +52,7 @@
       (hippo-theme-blue-3 "blue")
       (hippo-theme-region "gray30")
       (hippo-theme-shadow "gray80")
-      (hippo-theme-highlight "gray12")
+      (hippo-theme-highlight "RoyalBlue4")
       (hippo-theme-modeline-bg "gray25"))
   (apply #'custom-theme-set-faces 'hippo-themes-night
          (mapcar
